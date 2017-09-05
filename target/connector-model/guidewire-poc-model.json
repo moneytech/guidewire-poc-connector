@@ -1,0 +1,222 @@
+{
+  "minMuleVersion": "3.5.0",
+  "requiresEntitlement": false,
+  "requiresEnterpriseLicense": false,
+  "configs": [
+    {
+      "configElementName": "config",
+      "attributes": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "guidewireHost"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "consumerKey"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "consumerSecret"
+        }
+      ],
+      "javaName": "ConnectorConfig",
+      "friendlyName": "Configuration",
+      "type": "ConfigurationConfig"
+    }
+  ],
+  "attributes": [],
+  "processors": [
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [
+        {
+          "javaTypeName": "MuleMessage",
+          "fullQualifiedJavaTypeName": "org.mule.api.MuleMessage",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.api.MuleMessage",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "message"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "endpoint"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "claimsTrackingInboundServiceString",
+      "friendlyName": "Claims Tracking Inbound Service - String",
+      "description": "Claims Tracking Inbound Service (String)",
+      "xsdName": "claims-tracking-inbound-service-string"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "Object",
+        "fullQualifiedJavaTypeName": "java.lang.Object",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [
+        {
+          "javaTypeName": "MuleMessage",
+          "fullQualifiedJavaTypeName": "org.mule.api.MuleMessage",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.api.MuleMessage",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "message"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "endpoint"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "claimsTrackingInboundServicePojo",
+      "friendlyName": "Claims Tracking Inbound Service - POJO",
+      "description": "Claims Tracking Inbound Service (POJO)",
+      "xsdName": "claims-tracking-inbound-service-pojo"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "Object",
+        "fullQualifiedJavaTypeName": "java.lang.Object",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [
+        {
+          "javaTypeName": "MuleMessage",
+          "fullQualifiedJavaTypeName": "org.mule.api.MuleMessage",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.api.MuleMessage",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "message"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "endpoint"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "pocClaimService",
+      "friendlyName": "POC Claim Service",
+      "description": "POC Claim Service",
+      "xsdName": "poc-claim-service"
+    }
+  ],
+  "filters": [],
+  "transformers": [],
+  "sources": [],
+  "javaName": "GuidewirePOCConnector",
+  "friendlyName": "Guidewire POC",
+  "xsdName": "guidewire-poc"
+}

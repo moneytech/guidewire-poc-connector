@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/guidewire-poc" prefix="guidewire-poc">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Guidewire POC" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric"></global-cloud-connector>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Guidewire POC: Configuration" description="Global Configuration configuration information." icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="config" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/parentConfig" connectivityTesting="off" metaData="static" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Guidewire-poc configuration properties.">
+      <group id="guidewire-pocGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+      <group id="connection Settings" caption="Connection Settings">
+        <string name="guidewireHost" caption="Guidewire Host" description="" supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+      </group>
+      <group id="authentication Settings" caption="Authentication Settings">
+        <string name="consumerKey" caption="Key" description="Key for authentication." supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+        <string name="consumerSecret" caption="Secret" description="Secret for authentication." supportsExpressions="false" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractguidewire-pocconnectorgeneric" description="Interact with Guidewire-poc." icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="abstractGuidewire-pocConnectorGeneric" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractGuidewire-pocConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/guidewire-poc/config" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.guidewire-poc" caption="Guidewire POC" description="" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="guidewire-poc-connector" image="icons/theme.classic/guidewire-poc-connector-large.png" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="guidewire-pocConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Guidewire-poc operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/claims-tracking-inbound-service-pojo" modeLabel="Claims Tracking Inbound Service - POJO"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/claims-tracking-inbound-service-string" modeLabel="Claims Tracking Inbound Service - String"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/poc-claim-service" modeLabel="POC Claim Service"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.Object" caption="Claims Tracking Inbound Service - Pojo" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="claims-tracking-inbound-service-pojo" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="endpoint" caption="Endpoint" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" caption="Claims Tracking Inbound Service - String" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="claims-tracking-inbound-service-string" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="endpoint" caption="Endpoint" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.Object" caption="Poc Claim Service" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="poc-claim-service" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="endpoint" caption="Endpoint" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
