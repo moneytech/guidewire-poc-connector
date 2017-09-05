@@ -4,7 +4,7 @@ package org.mule.modules.guidewirepoc.generated.adapter;
 import javax.annotation.Generated;
 
 @SuppressWarnings("all")
-@Generated(value = "Mule DevKit Version 3.9.0", date = "2017-09-05T01:53:42+01:00", comments = "Build UNNAMED.2793.f49b6c7")
+@Generated(value = "Mule DevKit Version 3.9.0", date = "2017-09-05T05:04:21+01:00", comments = "Build UNNAMED.2793.f49b6c7")
 public interface PoolManager {
 
     /**

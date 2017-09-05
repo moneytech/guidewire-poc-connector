@@ -8,8 +8,6 @@ import org.mule.api.annotations.Processor;
 import org.mule.modules.guidewirepoc.config.ConnectorConfig;
 import org.mule.modules.guidewirepoc.pocclaimservice.POCClaimServiceRequest;
 
-import com.sun.mail.handlers.message_rfc822;
-
 import org.mule.modules.guidewirepoc.claimstrackinginboundservice.*;
 
 @Connector(name="guidewire-poc", friendlyName="Guidewire POC")

@@ -11,7 +11,7 @@ package com.guidewire.cc.webservices.fault;
 /**
  * A generic SOAP exception.
  */
-public class SOAPException  extends org.apache.axis.AxisFault implements java.io.Serializable {
+public class SOAPException  extends org.apache.axis.AxisFault  implements java.io.Serializable {
     /* The message associated with this exception */
     private java.lang.String message1;
 

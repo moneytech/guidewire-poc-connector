@@ -10,16 +10,16 @@ package com.guidewire.cc.webservices.entity;
 public class PolicyHolder  implements java.io.Serializable {
     private java.lang.String firstName;
 
-    private java.lang.String surnameName;
+    private java.lang.String surname;
 
     public PolicyHolder() {
     }
 
     public PolicyHolder(
            java.lang.String firstName,
-           java.lang.String surnameName) {
+           java.lang.String surname) {
            this.firstName = firstName;
-           this.surnameName = surnameName;
+           this.surname = surname;
     }
 
 
@@ -44,22 +44,22 @@ public class PolicyHolder  implements java.io.Serializable {
 
 
     /**
-     * Gets the surnameName value for this PolicyHolder.
+     * Gets the surname value for this PolicyHolder.
      * 
-     * @return surnameName
+     * @return surname
      */
-    public java.lang.String getSurnameName() {
-        return surnameName;
+    public java.lang.String getSurname() {
+        return surname;
     }
 
 
     /**
-     * Sets the surnameName value for this PolicyHolder.
+     * Sets the surname value for this PolicyHolder.
      * 
-     * @param surnameName
+     * @param surname
      */
-    public void setSurnameName(java.lang.String surnameName) {
-        this.surnameName = surnameName;
+    public void setSurname(java.lang.String surname) {
+        this.surname = surname;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -77,9 +77,9 @@ public class PolicyHolder  implements java.io.Serializable {
             ((this.firstName==null && other.getFirstName()==null) || 
              (this.firstName!=null &&
               this.firstName.equals(other.getFirstName()))) &&
-            ((this.surnameName==null && other.getSurnameName()==null) || 
-             (this.surnameName!=null &&
-              this.surnameName.equals(other.getSurnameName())));
+            ((this.surname==null && other.getSurname()==null) || 
+             (this.surname!=null &&
+              this.surname.equals(other.getSurname())));
         __equalsCalc = null;
         return _equals;
     }
@@ -94,8 +94,8 @@ public class PolicyHolder  implements java.io.Serializable {
         if (getFirstName() != null) {
             _hashCode += getFirstName().hashCode();
         }
-        if (getSurnameName() != null) {
-            _hashCode += getSurnameName().hashCode();
+        if (getSurname() != null) {
+            _hashCode += getSurname().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -114,8 +114,8 @@ public class PolicyHolder  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("surnameName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "SurnameName"));
+        elemField.setFieldName("surname");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "Surname"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
