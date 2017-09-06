@@ -263,6 +263,58 @@
       "friendlyName": "POC Questionnaire Service",
       "description": "POC Questionnaire Service",
       "xsdName": "poc-questionnaire-service"
+    },
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "boolean",
+        "fullQualifiedJavaTypeName": "boolean",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [
+        {
+          "javaTypeName": "MuleMessage",
+          "fullQualifiedJavaTypeName": "org.mule.api.MuleMessage",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": false,
+          "typeMirror": "org.mule.api.MuleMessage",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "message"
+        },
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "endpoint"
+        }
+      ],
+      "apiDocUrl": "",
+      "javaName": "pocUploadService",
+      "friendlyName": "POC Upload Service",
+      "description": "POC Questionnaire Service",
+      "xsdName": "poc-upload-service"
     }
   ],
   "filters": [],

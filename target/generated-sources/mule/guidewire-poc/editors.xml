@@ -32,6 +32,7 @@
           <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/claims-tracking-inbound-service-string" modeLabel="Claims Tracking Inbound Service - String"></mode>
           <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/poc-claim-service" modeLabel="POC Claim Service"></mode>
           <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/poc-questionnaire-service" modeLabel="POC Questionnaire Service"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/guidewire-poc/poc-upload-service" modeLabel="POC Upload Service"></mode>
         </modeSwitch>
       </group>
     </attribute-category>
@@ -58,6 +59,13 @@
     </attribute-category>
   </cloud-connector>
   <cloud-connector returnType="java.lang.Object" caption="Poc Questionnaire Service" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="poc-questionnaire-service" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="endpoint" caption="Endpoint" description="" required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="boolean" caption="Poc Upload Service" icon="icons/theme.classic/guidewire-poc-connector-small.png" localId="poc-upload-service" image="icons/theme.classic/guidewire-poc-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/guidewire-poc/abstractGuidewire-pocConnectorGeneric" metaData="static">
     <attribute-category caption="General" description="General.">
       <group id="general" caption="General">
         <string name="endpoint" caption="Endpoint" description="" required="true" javaType="java.lang.String"></string>

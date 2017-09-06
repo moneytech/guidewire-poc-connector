@@ -33,12 +33,12 @@ import org.mule.security.oauth.callback.ProcessCallback;
 
 
 /**
- * ClaimsTrackingInboundServiceStringMessageProcessor invokes the {@link org.mule.modules.guidewirepoc.GuidewirePOCConnector#claimsTrackingInboundServiceString(org.mule.api.MuleMessage, java.lang.String)} method in {@link GuidewirePOCConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * PocUploadServiceMessageProcessor invokes the {@link org.mule.modules.guidewirepoc.GuidewirePOCConnector#pocUploadService(org.mule.api.MuleMessage, java.lang.String)} method in {@link GuidewirePOCConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
 @SuppressWarnings("all")
 @Generated(value = "Mule DevKit Version 3.9.0", date = "2017-09-06T03:52:09+01:00", comments = "Build UNNAMED.2793.f49b6c7")
-public class ClaimsTrackingInboundServiceStringMessageProcessor
+public class PocUploadServiceMessageProcessor
     extends DevkitBasedMessageProcessor
     implements MessageProcessor, OperationMetaDataEnabled
 {
@@ -48,7 +48,7 @@ public class ClaimsTrackingInboundServiceStringMessageProcessor
     protected Object endpoint;
     protected String _endpointType;
 
-    public ClaimsTrackingInboundServiceStringMessageProcessor(String operationName) {
+    public PocUploadServiceMessageProcessor(String operationName) {
         super(operationName);
     }
 
@@ -111,7 +111,7 @@ public class ClaimsTrackingInboundServiceStringMessageProcessor
         Object moduleObject = null;
         try {
             moduleObject = findOrCreate(null, false, event);
-            final String _transformedEndpoint = ((String) evaluateAndTransform(getMuleContext(), event, ClaimsTrackingInboundServiceStringMessageProcessor.class.getDeclaredField("_endpointType").getGenericType(), null, endpoint));
+            final String _transformedEndpoint = ((String) evaluateAndTransform(getMuleContext(), event, PocUploadServiceMessageProcessor.class.getDeclaredField("_endpointType").getGenericType(), null, endpoint));
             Object resultPayload;
             final ProcessTemplate<Object, Object> processTemplate = ((ProcessAdapter<Object> ) moduleObject).getProcessTemplate();
             resultPayload = processTemplate.execute(new ProcessCallback<Object,Object>() {
@@ -128,7 +128,7 @@ public class ClaimsTrackingInboundServiceStringMessageProcessor
                 public Object process(Object object)
                     throws Exception
                 {
-                    return ((GuidewirePOCConnector) object).claimsTrackingInboundServiceString(event.getMessage(), _transformedEndpoint);
+                    return ((GuidewirePOCConnector) object).pocUploadService(event.getMessage(), _transformedEndpoint);
                 }
 
             }
@@ -147,7 +147,7 @@ public class ClaimsTrackingInboundServiceStringMessageProcessor
 
     @Override
     public Result<MetaData> getOutputMetaData(MetaData inputMetadata) {
-        MetaDataModel metaDataPayload = getPojoOrSimpleModel(String.class);
+        MetaDataModel metaDataPayload = getPojoOrSimpleModel(boolean.class);
         DefaultMetaDataKey keyForStudio = new DefaultMetaDataKey("OUTPUT_METADATA", null);
         metaDataPayload.addProperty(STUDIO7157 .getStructureIdentifierMetaDataModelProperty(keyForStudio, false, false));
         return new DefaultResult<MetaData>(new DefaultMetaData(metaDataPayload));
@@ -172,7 +172,7 @@ public class ClaimsTrackingInboundServiceStringMessageProcessor
                     return metadata;
                 }
                 if (metadata.get() == null) {
-                    return new DefaultResult<MetaData>(null, (Result.Status.FAILURE), "There was an error processing metadata at GuidewirePOCConnector at claimsTrackingInboundServiceString retrieving was successful but result is null");
+                    return new DefaultResult<MetaData>(null, (Result.Status.FAILURE), "There was an error processing metadata at GuidewirePOCConnector at pocUploadService retrieving was successful but result is null");
                 }
                 return metadata;
             } catch (Exception e) {

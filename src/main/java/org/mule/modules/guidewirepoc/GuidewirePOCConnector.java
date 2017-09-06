@@ -4,11 +4,13 @@ import org.mule.api.MuleMessage;
 import org.mule.api.annotations.Config;
 import org.mule.api.annotations.Connector;
 import org.mule.api.annotations.Processor;
-
+import org.mule.modules.guidewirepoc.claimstrackinginboundservice.ClaimsTrackingInboundServicePOJORequest;
+import org.mule.modules.guidewirepoc.claimstrackinginboundservice.ClaimsTrackingInboundServiceStringRequest;
 import org.mule.modules.guidewirepoc.config.ConnectorConfig;
 import org.mule.modules.guidewirepoc.pocclaimservice.POCClaimServiceRequest;
 import org.mule.modules.guidewirepoc.pocquestionnaireservice.POCQuestionnaireServiceRequest;
-import org.mule.modules.guidewirepoc.claimstrackinginboundservice.*;
+import org.mule.modules.guidewirepoc.pocuploadservice.POCUploadServiceRequest;
+import org.mule.modules.guidewirepoc.pocuploadservice.PocUploadInput;
 
 @Connector(name="guidewire-poc", friendlyName="Guidewire POC")
 public class GuidewirePOCConnector {
@@ -66,6 +68,19 @@ public class GuidewirePOCConnector {
     	
     	POCQuestionnaireServiceRequest serviceRequest = new POCQuestionnaireServiceRequest();
     	Object response = serviceRequest.request(requestString, endpoint);
+    	
+    	return response;
+    }
+
+    /**
+     * POC Questionnaire Service
+     */
+    @Processor(friendlyName = "POC Upload Service")
+    public boolean pocUploadService(MuleMessage message, String endpoint){
+    	PocUploadInput input = (PocUploadInput) message.getPayload();
+    	
+    	POCUploadServiceRequest serviceRequest = new POCUploadServiceRequest();
+    	boolean response = serviceRequest.request(input, endpoint);
     	
     	return response;
     }
