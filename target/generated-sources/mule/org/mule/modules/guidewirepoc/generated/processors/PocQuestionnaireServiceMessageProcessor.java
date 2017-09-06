@@ -33,12 +33,12 @@ import org.mule.security.oauth.callback.ProcessCallback;
 
 
 /**
- * PocClaimServiceMessageProcessor invokes the {@link org.mule.modules.guidewirepoc.GuidewirePOCConnector#pocClaimService(org.mule.api.MuleMessage, java.lang.String)} method in {@link GuidewirePOCConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * PocQuestionnaireServiceMessageProcessor invokes the {@link org.mule.modules.guidewirepoc.GuidewirePOCConnector#pocQuestionnaireService(org.mule.api.MuleMessage, java.lang.String)} method in {@link GuidewirePOCConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
 @SuppressWarnings("all")
 @Generated(value = "Mule DevKit Version 3.9.0", date = "2017-09-06T10:18:00+01:00", comments = "Build UNNAMED.2793.f49b6c7")
-public class PocClaimServiceMessageProcessor
+public class PocQuestionnaireServiceMessageProcessor
     extends DevkitBasedMessageProcessor
     implements MessageProcessor, OperationMetaDataEnabled
 {
@@ -48,7 +48,7 @@ public class PocClaimServiceMessageProcessor
     protected Object endpoint;
     protected String _endpointType;
 
-    public PocClaimServiceMessageProcessor(String operationName) {
+    public PocQuestionnaireServiceMessageProcessor(String operationName) {
         super(operationName);
     }
 
@@ -111,7 +111,7 @@ public class PocClaimServiceMessageProcessor
         Object moduleObject = null;
         try {
             moduleObject = findOrCreate(null, false, event);
-            final String _transformedEndpoint = ((String) evaluateAndTransform(getMuleContext(), event, PocClaimServiceMessageProcessor.class.getDeclaredField("_endpointType").getGenericType(), null, endpoint));
+            final String _transformedEndpoint = ((String) evaluateAndTransform(getMuleContext(), event, PocQuestionnaireServiceMessageProcessor.class.getDeclaredField("_endpointType").getGenericType(), null, endpoint));
             Object resultPayload;
             final ProcessTemplate<Object, Object> processTemplate = ((ProcessAdapter<Object> ) moduleObject).getProcessTemplate();
             resultPayload = processTemplate.execute(new ProcessCallback<Object,Object>() {
@@ -128,7 +128,7 @@ public class PocClaimServiceMessageProcessor
                 public Object process(Object object)
                     throws Exception
                 {
-                    return ((GuidewirePOCConnector) object).pocClaimService(event.getMessage(), _transformedEndpoint);
+                    return ((GuidewirePOCConnector) object).pocQuestionnaireService(event.getMessage(), _transformedEndpoint);
                 }
 
             }
@@ -172,7 +172,7 @@ public class PocClaimServiceMessageProcessor
                     return metadata;
                 }
                 if (metadata.get() == null) {
-                    return new DefaultResult<MetaData>(null, (Result.Status.FAILURE), "There was an error processing metadata at GuidewirePOCConnector at pocClaimService retrieving was successful but result is null");
+                    return new DefaultResult<MetaData>(null, (Result.Status.FAILURE), "There was an error processing metadata at GuidewirePOCConnector at pocQuestionnaireService retrieving was successful but result is null");
                 }
                 return metadata;
             } catch (Exception e) {

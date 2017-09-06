@@ -7,7 +7,7 @@ import org.mule.api.annotations.Processor;
 
 import org.mule.modules.guidewirepoc.config.ConnectorConfig;
 import org.mule.modules.guidewirepoc.pocclaimservice.POCClaimServiceRequest;
-
+import org.mule.modules.guidewirepoc.pocquestionnaireservice.POCQuestionnaireServiceRequest;
 import org.mule.modules.guidewirepoc.claimstrackinginboundservice.*;
 
 @Connector(name="guidewire-poc", friendlyName="Guidewire POC")
@@ -51,6 +51,20 @@ public class GuidewirePOCConnector {
     	String requestString = payload.toString();
     	
     	POCClaimServiceRequest serviceRequest = new POCClaimServiceRequest();
+    	Object response = serviceRequest.request(requestString, endpoint);
+    	
+    	return response;
+    }
+    
+    /**
+     * POC Questionnaire Service
+     */
+    @Processor(friendlyName = "POC Questionnaire Service")
+    public Object pocQuestionnaireService(MuleMessage message, String endpoint) {
+    	Object payload = message.getPayload();
+    	String requestString = payload.toString();
+    	
+    	POCQuestionnaireServiceRequest serviceRequest = new POCQuestionnaireServiceRequest();
     	Object response = serviceRequest.request(requestString, endpoint);
     	
     	return response;
