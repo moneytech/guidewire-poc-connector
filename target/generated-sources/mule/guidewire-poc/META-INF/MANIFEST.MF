@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Guidewire POC
 Bundle-SymbolicName: org.mule.tooling.ui.contribution.guidewire-poc.3.5.0;singleton:=true
-Bundle-Version: 1.0.0.201709061552
+Bundle-Version: 1.0.0.201709070032
 Bundle-Activator: org.mule.tooling.ui.contribution.GuidewirePocActivator
 Bundle-Vendor: 
 Require-Bundle: org.eclipse.ui,

@@ -30,6 +30,7 @@ public class PocUploadInput {
 	public void setImageBytes(byte[] imageBytes) {
 		this.imageBytes = imageBytes;
 	}
-	
-
+	public String toString() {
+		return getClass().getName() + "@{claimNumber: "+claimNumber+",filename: "+filename+",fileDescription: "+fileDescription+",imageBytes.length: "+(imageBytes == null ? "null" : imageBytes.length)+"}";
+	}
 }
